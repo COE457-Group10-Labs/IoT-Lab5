@@ -1,0 +1,67 @@
+<!-- 
+    Lab 5 Exercise 1: Sensor Webpage (HTML only)
+    Authors: Mariam Reda & Farah Balaha
+-->
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--Link above is used for navbar icons -->
+        <link rel="stylesheet" type="text/css" media="all" href="Lab5_CSS.css"/>
+        <title>COE457 Smart Lab</title>
+    </head>
+
+    <body>
+        
+        <header>
+            <a href="http://auscse.com/" target="_blank">   <!-- clicking image opens AUS CSE website in new tab -->
+                <img src="images\cse_logo.png" style="height: 56px; width: 300px;" alt="AUS CSE Logo"/>
+                    <!--style used for image height and width to avoid being overridden later on by style sheets-->
+                    <!-- http://auscse.com/main/images/banner.png -->
+            </a>
+            <br/><br/>
+        </header>
+
+        <nav>       <!--Navigation Bar-->
+            <a href="Lab5_SmartLabForm.html"><i class="fa fa-home"></i> Home </a>
+            <a class="active" href="Lab5_SensorPage.html"><i class="fa fa-list-ul"></i> Sensors </a>
+        </nav>
+
+        <section>
+            <br/>
+            <h1>Sensors Available</h1>
+        </section>
+
+        <section>
+            <p class="text"> Sensor data can be collected from Android app SensorStreamer. </p>
+            <p class="text">Here is a list of the available sensors on the SensorStreamer app: <br/></p>
+            
+            <aside>
+                <img src="images/sensorstreamer_logo.png"  style="height: 100px; width: 100px;" alt="Sensor Streamer Logo" />
+            </aside>
+
+            <ul>
+                <li>Accelerometer</li>
+                <li>Gravity</li>
+                <li>Gyroscope</li>
+                <li>Light</li>
+                <li>Linear Acceleration</li>
+                <li>Magnetic Field</li>
+                <li>Proximity</li>
+                <li>Rotation Vector</li>
+            </ul>
+        </section>
+        <br/>
+
+        <footer>
+            <hr/>
+            <h4 class="copyright"> &copy; Farah Balaha & Mariam Reda </h4> <!-- copyright symbol-->
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,83 @@
+<!-- 
+    Lab 5 Exercise 1: Smart Lab Webpage (HTML only)
+    Authors: Mariam Reda & Farah Balaha
+-->
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--Link above is used for navbar icons -->
+
+        <!--Version 1 Stylesheet-->
+        <!-- <link rel="stylesheet" type="text/css" media="all" href="Lab5_CSS.css"/>  -->
+        <!--Version 2 Stylesheet-->
+        <link rel="stylesheet" type="text/css" media="all" href="Lab5_CSS_v2.css"/>     
+        
+        <title>COE457 Smart Lab</title>
+    </head>
+    
+
+    <body>
+        
+        <header>
+            <a href="http://auscse.com/" target="_blank">   <!-- clicking image opens AUS CSE website in new tab -->
+                <img src="images\cse_logo.png" style="height: 56px; width: 300px;" alt="AUS CSE Logo"/>
+                    <!--style used for image height and width to avoid being overridden later on by style sheets-->
+                    <!-- http://auscse.com/main/images/banner.png -->
+            </a>
+            <br/><br/>
+        </header>
+
+        <nav>       <!--Navigation Bar-->
+            <a class="active" href="Lab5_SmartLabForm.html"><i class="fa fa-home"></i> Home </a>
+            <a href="Lab5_SensorPage.html"><i class="fa fa-list-ul"></i> Sensors </a>
+        </nav>
+
+        <section>
+            <br/><br/>
+            <p class="text">Set up the Smart Lab's Light, AC, and Temperature below: </p>
+        </section>
+
+        <section class = "formSection">
+            <h1 id="formHeading">COE457 Smart Lab</h1>
+            <form action="Lab5_SmartLabForm.html" method="POST"> <!--POST method not allowed by LiveServer though - change to GET to work through LiveServer-->
+                <fieldset>
+                    <div class="formLine">
+                        <label for="lightsSetting"> Lab Lights: </label>
+                        <input type="radio" class="radioBtn" id="lightsOn" name="lightsSetting" value="ON" checked> ON 
+                        <input type="radio" class="radioBtn" id="lightsOff" name="lightsSetting" value="OFF"> OFF
+                        <br/>
+                    </div>
+
+                    <div class="formLine">
+                        <label for="ACSetting"> AC Mode: </label>
+                        <input type="radio" id="ACOn" name="ACSetting" value="ON" checked> ON
+                        <input type="radio" id="ACOff" name="ACSetting" value="OFF"> OFF
+                        <br/>
+                    </div>
+                    
+                    <div class="formLine">
+                        <label for="tempSetting"> Temperature threshold: </label>
+                        <input type="number" id="tempSetting" name="tempSetting" placeholder=" Enter temperature (15.0-28.0 C)" step="any" min="15.0" max="28.0" required>
+                        <br/>
+                    </div>
+                    <br/>
+
+                    <input type="submit" id="SaveBtn" value="Save">
+                </fieldset>
+            </form>
+        </section>
+        <br/><br/><br/><br/>
+
+        <footer>
+            <hr/>
+            <h4 class="copyright"> &copy; Farah Balaha & Mariam Reda </h4> <!-- copyright symbol-->
+        </footer>
+    </body>
+
+</html>
